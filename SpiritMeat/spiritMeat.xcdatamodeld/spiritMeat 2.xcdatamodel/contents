@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DayContent" representedClassName="DayContent" syncable="YES">
+        <attribute name="actualContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="info" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Dayinfo" inverseName="content" inverseEntity="Dayinfo" syncable="YES"/>
+    </entity>
+    <entity name="Dayinfo" representedClassName="Dayinfo" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dayOfTheMonth" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topic" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="content" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="DayContent" inverseName="info" inverseEntity="DayContent" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DayContent" positionX="-3006" positionY="-297" width="128" height="88"/>
+        <element name="Dayinfo" positionX="-3267" positionY="-298" width="128" height="103"/>
+    </elements>
+</model>
